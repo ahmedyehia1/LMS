@@ -1,0 +1,9 @@
+html
+    head
+        title="404 Error"
+        link(rel='stylesheet', href='/static/css/bootstrap.min.css')
+    body
+        div(class="container my-4")
+            h1="Something Went Wrong"
+            p(class="text-danger")=msg
+            a(href=redirect)="retry"

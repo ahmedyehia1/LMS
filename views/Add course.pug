@@ -1,0 +1,13 @@
+html
+    head
+        title="New Course"
+        link(rel='stylesheet', href='/static/css/bootstrap.min.css')
+    body
+        div(class="container text-center my-4")
+            div(class="mx-auto col-lg-4 col-xs-10")
+                h1="Create new Course"
+                form(class="my-4",action="/web/courses",method="POST")
+                    input(class="form-control my-2",type="text",placeholder="name",name="name")
+                    input(class="form-control my-2",type="text",placeholder="code",name="code")
+                    textarea(class="form-control my-2",placeholder="description (optional)",name="description", cols="30", rows="10")
+                    input(class="btn btn-primary my-2 col-4",type="submit",value="Submit")

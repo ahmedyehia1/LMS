@@ -1,0 +1,14 @@
+html
+    head
+        title="Students"
+        link(rel='stylesheet', href='/static/css/bootstrap.min.css')
+    body
+        div(class="container")
+            h1="Students list"
+            ul(class="list-group")
+                each s in students
+                    li(class="list-group-item")
+                        a(href=`/web/students/${s.id}`)= s.code + ': ' + s.name
+            br
+            a(href=`/web/students/create`)= "Add Student"
+        

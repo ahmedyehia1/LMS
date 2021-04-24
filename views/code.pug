@@ -1,0 +1,16 @@
+html
+    head
+        title="LMS"
+        link(rel='stylesheet', href='/static/css/bootstrap.min.css')
+    body
+        div(class="container mt-4")
+            nav(aria-label="breadcrumb")
+                ol(class="breadcrumb")
+                    each p in path.slice(0,-1)
+                        li(class="breadcrumb-item")
+                            a(href=`/web/sourceCode/${path.slice(0,-1).join('/')}`)=p
+                    li(class="breadcrumb-item active",aria-current="page")=path[path.length-1]
+            h1=path[path.length-1]
+            div(class="jumbotron my-4 py-4")
+                p(style="white-space: pre-wrap;font-family: Arial;font-size:12px")=code
+                

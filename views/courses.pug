@@ -1,0 +1,14 @@
+html
+    head
+        title="Courses"
+        link(rel='stylesheet', href='/static/css/bootstrap.min.css')
+    body
+        div(class="container")
+            h1="Courses list"
+            ul(class="list-group")
+                each c in courses
+                    li(class="list-group-item")
+                        a(href=`/web/courses/${c.id}`)= c.code + ': ' + c.name
+            br
+            a(href=`/web/courses/create`)= "Add Course"
+        
